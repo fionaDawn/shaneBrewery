@@ -6,7 +6,6 @@
   "scripts": {
     "start": "webpack-dev-server --open --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
-    "prod": "webpack --config --open webpack.prod.js",
     "dev": "yarn run start & (cd thermometerSensor && yarn run start) & (cd breweryApi && yarn run start)",
     "test": "jest",
     "testWithCoverage": "jest --coverage",
