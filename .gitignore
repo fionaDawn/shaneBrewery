@@ -1,1 +1,12 @@
-.DS_Store
+coverage/
+
+.DS_STORE
+
+# Dependency directories
+node_modules/
+
+# Distribution directories
+dist/
+
+# dotenv environment variables file
+*.env
