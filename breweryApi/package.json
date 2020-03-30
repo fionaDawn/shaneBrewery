@@ -1,0 +1,32 @@
+{
+  "name": "breweryapi",
+  "version": "1.0.0",
+  "description": "Data provider for frontend pragmaBrewery",
+  "main": "index.js",
+  "scripts": {
+    "start": "node start.js",
+    "dev": "nodemon start.js",
+    "test": "jest --coverage"
+  },
+  "author": "Fiona Potestas",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "25.2.1",
+    "nock": "12.0.3",
+    "nodemon": "2.0.2"
+  },
+  "dependencies": {
+    "cors": "2.8.5",
+    "dotenv": "8.2.0",
+    "express": "4.17.1",
+    "lodash": "4.17.15",
+    "node-fetch": "2.6.0",
+    "web-push": "3.4.3"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+version: "3"
+services:
+  pragmabrewery:
+    container_name: pragmabrewery
+    build:
+      context: ./pragmabrewery
+      dockerfile: Dockerfile
+    image: fionadawn/pragmabrewery
+    ports:
+      - "8080:80"
+    volumes:
+      - ./pragmabrewery:/usr/src/app
+  breweryapi:
+    container_name: breweryapi
+    build:
+      context: ./breweryapi
+      dockerfile: Dockerfile
+    image: fionadawn/breweryapi
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./breweryapi:/usr/src/app
+  thermometersensor:
+    container_name: thermometersensor
+    build:
+      context: ./thermometersensor
+      dockerfile: Dockerfile
+    image: fionadawn/thermometersensor
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./thermometersensor:/usr/src/app

@@ -1,0 +1,44 @@
+{
+  "1": {
+    "name": "Pilsner",
+    "minTemp": 4,
+    "maxTemp": 6,
+    "id": "1",
+    "defaultTemp": 5
+  },
+  "2": {
+    "name": "IPA",
+    "minTemp": 5,
+    "maxTemp": 6,
+    "id": "2",
+    "defaultTemp": 5
+  },
+  "3": {
+    "name": "Lager",
+    "minTemp": 4,
+    "maxTemp": 7,
+    "id": "3",
+    "defaultTemp": 6
+  },
+  "4": {
+    "name": "Stout",
+    "minTemp": 6,
+    "maxTemp": 8,
+    "id": "4",
+    "defaultTemp": 7
+  },
+  "5": {
+    "name": "Wheat",
+    "minTemp": 3,
+    "maxTemp": 5,
+    "id": "5",
+    "defaultTemp": 4
+  },
+  "6": {
+    "name": "Pale Ale",
+    "minTemp": 4,
+    "maxTemp": 6,
+    "id": "6",
+    "defaultTemp": 5
+  }
+}

@@ -1,0 +1,33 @@
+.root {
+  height: 100%;
+  display: flex;
+}
+.content {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.alignright {
+  margin-left: auto !important;
+}
+.cardInputRoot {
+  width: 50%;
+  padding: 24px;
+}
+.cardTripRoot {
+  padding: 24px;
+}
+.container {
+  width: 250px !important;
+  height: 250px;
+}
+.cardError {
+  background: #f54444 !important;
+  padding: 24px;
+}
+.cardOk {
+  background: #9be09b !important;
+  padding: 24px;
+  color: #444343 !important;
+}
