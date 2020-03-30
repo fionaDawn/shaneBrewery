@@ -1,17 +1,17 @@
 # Pragmabrewery
 
 
-# Pre-requisites:
+#### Pre-requisites:
 - node
 - yarn
 - docker
 - docker-compose
 
-# How to run locally?
+### How to run locally?
 Clone this repo and run `bash run.sh` in the root folder
 
-# How to test?
-run `bash test.sh` in the root folder
+### How to test?
+Run `bash test.sh` in the root folder
 
 ### What are the highlights of your logic/code writing style?
 
@@ -21,29 +21,31 @@ I did not put an update temperature button for every container, might not be too
 
 Over all, the project is built with a mix of MVC and Microservice architecture. I added a mock sensor service since I didn't want to add this in the backend if it's for temporary.
 
-## breweryApi (backend)
-This project is in Node with Express. I used Service-Sent Events as the main communication from the backend to the frontend. There's no database integrated with it yet, for now it just loads data from the json file. Initally thought about just using the Web Push Notification however it just runs in the background and doesn't reflect in the UI until you click the actual notification.
+#### breweryApi (backend)
+This project is in Node with Express. I used Service-Sent Events as the main communication from the backend to the frontend. There's no database integrated with it yet, for now it just loads data from the json file. 
 
 File structure is also patterned to MVC style. Models are separate from the controllers, and so on. Jest is used for testing and nock for mocking http requests.
 
 
-# pragmabrewery (frontend)
+#### pragmabrewery (frontend)
 Frontend is in React and Redux, with babel as javscript compiler and webpack to bundle javascript files. The UI components are in Material Ui framework. I decided to use the framework for easier and faster development on the UI components. Jest is used for running test and Enzyme for React components.
+
+EventSource is used to listen to the messages sent from the backend through Service-Sent Events.
 
 For the file structure, all actions, services and reducers are placed in an entity's folder. It would be easier to debug related files under a single folder rather than navigating to a lot of folders, especially on large scale apps.
 
-# thermometersensor (mock container service)
+#### thermometersensor (mock container service)
  Node and Express JS mock service for the containers to be able to call the api endpoint to update the temperature at a certain interval.
  
  Currently this is also the service that stops the whole delivery by a single click since this is the service that holds the timer to keep on updating container temperature.
  
 
-# What could you do better in your next iteration?
+### What could you do better in your next iteration?
 For the backend, boost test coverage, add more cases and integrate it to an actual DB. Right now it's only retrieving beer data from a json file. Add validation for max number of containers. Right now it an accomodate as much as whatever the user inputs.
 
 For the frontend, styling and more interactive components. Validation for text inputs. Add web push notification so even when Shane would go off screen, he'll still get notified.
 
-# What were the questions you asked and your own answers/assumptions.
+### What were the questions you asked and your own answers/assumptions.
 
 1. How many containers could fit in one delivery?
    There is no limit - containers could be of different sizes.
@@ -68,3 +70,10 @@ For the frontend, styling and more interactive components. Validation for text i
    
 8. How do we know the containers' configuration for every delivery?
    Shane can enter the number of containers per beer type.
+   
+### Any other notes you feel relevant for the evaluation of your solution?
+I learned a lot of new stuff while doing the code assessment. This is my first time creating React app from scratch without the use of create-react-app boilerplate. So I just learned what the loaders are for and resolving extensions to include jsx files. In testing, spent a lot of time figuring out how to test the Redux actions and how to simulate clicks in React components - since simulate was already deprecated.
+
+Also learned about web push notifications. I was able to make a prototype of it since this was the path I was gonna take but  it just runs in the background and doesn't reflect in the UI until you click the actual notification.
+
+The highlight of the highlights is being able to successfully run docker for all apps. Initially the setup was the backend and the thermometersensor will be inside the ui app and just run yarn from there. But today I did a last minute docker research and finally was able to successfully build it and figure out how to link the apps together.
