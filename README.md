@@ -8,7 +8,9 @@
 - docker-compose
 
 ### How to run locally?
-Clone this repo and run `bash run.sh` in the root folder
+1. Clone this repo and run `bash run.sh` in the root folder.
+2. Wait until it's done - it should log listening on ports 5000 and 3000.
+3. After that you’ll be able to enter a frontend in a browser with a link: http://localhost:8080
 
 ### How to test?
 Run `bash test.sh` in the root folder
@@ -41,7 +43,7 @@ For the file structure, all actions, services and reducers are placed in an enti
  
 
 ### What could you do better in your next iteration?
-For the backend, boost test coverage, add more cases and integrate it to an actual DB. Right now it's only retrieving beer data from a json file. Add validation for max number of containers. Right now it an accomodate as much as whatever the user inputs.
+For the backend, boost test coverage, add more cases and integrate it to an actual DB. Right now it's only retrieving beer data from a json file. Add validation for max number of containers. Right now it can accomodate as much as whatever the user inputs.
 
 For the frontend, styling and more interactive components. Validation for text inputs. Add web push notification so even when Shane would go off screen, he'll still get notified.
 
