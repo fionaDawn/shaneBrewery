@@ -1,4 +1,4 @@
-# Pragmabrewery
+# shaneBrewery
 
 
 #### Pre-requisites:
@@ -29,7 +29,7 @@ This project is in Node with Express. I used Service-Sent Events as the main com
 File structure is also patterned to MVC style. Models are separate from the controllers, and so on. Jest is used for testing and nock for mocking http requests.
 
 
-#### pragmabrewery (frontend)
+#### shanebrewery (frontend)
 Frontend is in React and Redux, with babel as javscript compiler and webpack to bundle javascript files. The UI components are in Material Ui framework. I decided to use the framework for easier and faster development on the UI components. Jest is used for running test and Enzyme for React components.
 
 EventSource is used to listen to the messages sent from the backend through Service-Sent Events.
