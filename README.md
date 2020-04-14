@@ -1,5 +1,47 @@
 # shaneBrewery
 
+# Problem
+Meet Shane. He works at a Brewery, a boutique microbrewery in a rural area of Australia,
+and is the creator of 6 unique beer varieties. Shane is responsible for driving the large transport
+truck, delivering goods from the brewery to a number of pubs across Sydney each week.
+Each beer has its own specific refrigeration needs while being transported:
+- Beer 1 (Pilsner): 4°C - 6°C
+- Beer 2 (IPA): 5°C - 6°C
+- Beer 3 (Lager): 4°C - 7°C
+- Beer 4 (Stout): 6°C - 8°C
+- Beer 5 (Wheat beer): 3°C - 5°C
+- Beer 6 (Pale Ale): 4°C - 6°C
+
+The refrigerated truck is loaded with multiple containers with beer bottles inside, each
+container set to a specific temperature and each containing a thermometer sensor.
+While driving, Shane is alerted if any of the containers fall outside of the temperature range.
+Unfortunately, this is common due to factors such as opening the doors to unload, the heat of
+the Sydney summer or sometimes due to forgetting the container doors ajar.
+Develop a solution that allows Shane to be aware of the current temperature of each container
+and notifies him when the temperatures are outside the correct range.
+
+### Constraints
+
+- You must use JavaScript technology for most of the solution
+- The solution must be implemented with an acceptable level of automated tests; we
+should be able to verify it from the command line.
+- There must be a web front-end component as well as a back-end component.
+- Your back-end component must integrate with our temperature service available at
+https://temperature-sensor-service.herokuapp.com/sensor/{id} with {id}
+being any string value you pass through. The service will return a JSON containing
+the string value you passed as id plus a temperature value between -2 and 10. Your
+back-end component must then be the data provider for your front-end component.
+- You must not use a code generator (e.g. create-react-app, Angular-CLI, Rails etc.)
+because we want to see how you do it and how you create your own setup (not how
+the frameworks does it for you), so that we can assess your own software design skills.
+- You are free to use libraries (eg. React, Jest, ExpressJS) but you cannot use anything
+that creates the structure/scaffolding for you, for the same reason above
+- The solution must run via the command-line and we should be able to boot it with a
+single command. The less dependencies on the operating system, the better. Once
+the minimum requirements are met, we must be able to boot it with a one-liner.
+- A database server isn’t required, if needed, mock the data in any application layer.
+
+# Solution
 
 #### Pre-requisites:
 - node
