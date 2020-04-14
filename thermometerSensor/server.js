@@ -13,4 +13,4 @@ app.use("/breweryTrip", tripRouter);
 
 app.listen(port);
 
-console.log("pragmaBrewery TRIP API server listening on: " + port);
+console.log("shaneBrewery TRIP API server listening on: " + port);

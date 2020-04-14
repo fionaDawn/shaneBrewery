@@ -1,7 +1,7 @@
 {
   "name": "breweryapi",
   "version": "1.0.0",
-  "description": "Data provider for frontend pragmaBrewery",
+  "description": "Data provider for frontend shaneBrewery",
   "main": "index.js",
   "scripts": {
     "start": "node start.js",

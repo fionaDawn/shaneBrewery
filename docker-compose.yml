@@ -1,15 +1,15 @@
 version: "3"
 services:
-  pragmabrewery:
-    container_name: pragmabrewery
+  shanebrewery:
+    container_name: shanebrewery
     build:
-      context: ./pragmabrewery
+      context: ./shanebrewery
       dockerfile: Dockerfile
-    image: fionadawn/pragmabrewery
+    image: fionadawn/shanebrewery
     ports:
       - "8080:80"
     volumes:
-      - ./pragmabrewery:/usr/src/app
+      - ./shanebrewery:/usr/src/app
   breweryapi:
     container_name: breweryapi
     build:

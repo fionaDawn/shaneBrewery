@@ -1,5 +1,5 @@
 import * as Constants from '../constants';
-import PragmaApi from '../api/Pragmabrewery';
+import ShaneBrewery from '../api/ShaneBrewery';
 
 const deliveryLoading = () => ({ type: Constants.DELIVERY_LOADING });
 
@@ -12,7 +12,7 @@ const deliveryFailure = (error) => ({
 
 export const startDelivery = (info) => (dispatch) => {
   dispatch(deliveryLoading());
-  const Api = new PragmaApi();
+  const Api = new ShaneBrewery();
   return Api.delivery
     .start(info)
     .then((_response) => dispatch(deliveryStartSuccess()))
@@ -23,7 +23,7 @@ const deliveryStopSuccess = () => ({ type: Constants.DELIVERY_STOP_SUCCESS });
 
 export const stopDelivery = () => (dispatch) => {
   dispatch(deliveryLoading());
-  const Api = new PragmaApi();
+  const Api = new ShaneBrewery();
   return Api.delivery
     .delete()
     .then((_response) => dispatch(deliveryStopSuccess()))

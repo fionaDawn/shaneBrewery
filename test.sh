@@ -1,5 +1,5 @@
 #!/bin/bash
-cd pragmabrewery/
+cd shanebrewery/
 yarn install 
 yarn run testWithCoverage
 

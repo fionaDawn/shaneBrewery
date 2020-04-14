@@ -3,7 +3,7 @@ import ContainerApi from '../container/ContainerApi';
 import dotenv from 'dotenv';
 dotenv.config();
 
-export default class Pragmabrewery {
+export default class ShaneBrewery {
   constructor(url) {
     const envUrl = process.env.REACT_APP_BREWERYTRIP_URL
       ? process.env.REACT_APP_BREWERYTRIP_URL

@@ -1,10 +1,10 @@
-import Pragmabrewery from '../../src/api/Pragmabrewery';
+import ShaneBrewery from '../../src/api/ShaneBrewery';
 import _Mock from '../../mocks/mock.config';
 
-describe('Pragmabrewery conctructor', () => {
-  const defaultUrl = new Pragmabrewery();
+describe('ShaneBrewery conctructor', () => {
+  const defaultUrl = new ShaneBrewery();
   const url = global.BASE_API_CONTAINER_URL;
-  const customUrl = new Pragmabrewery(url);
+  const customUrl = new ShaneBrewery(url);
 
   it('should have a default URL', function () {
     expect(defaultUrl.baseUrl).toEqual(global.BASE_API_URL);

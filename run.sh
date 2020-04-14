@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # install dependencies for ui
-cd pragmabrewery/
+cd shanebrewery/
 yarn install
 
 cd ../thermometerSensor/

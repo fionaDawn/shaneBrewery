@@ -1,4 +1,4 @@
-import Pragmabrewery from '../../src/api/Pragmabrewery';
+import ShaneBrewery from '../../src/api/ShaneBrewery';
 import _Mock from '../../mocks/mock.config';
 
 describe('Delivery', function () {
@@ -28,7 +28,7 @@ describe('Delivery', function () {
   };
 
   const breweryApiUrl = `${global.BASE_API_CONTAINER_URL}/breweryApi`;
-  const myContainer = new Pragmabrewery(breweryApiUrl).container;
+  const myContainer = new ShaneBrewery(breweryApiUrl).container;
 
   describe('constructor', function () {
     it('should store the Base URL', function () {
@@ -36,7 +36,7 @@ describe('Delivery', function () {
       expect(myContainer.endpoint).toEqual('/containers');
     });
     it('should store the Base URL and cannot override endpoint', function () {
-      const otherContainer = new Pragmabrewery().container;
+      const otherContainer = new ShaneBrewery().container;
       expect(otherContainer.baseUrl).toEqual(global.BASE_API_URL);
       expect(otherContainer.endpoint).toEqual('/containers');
     });

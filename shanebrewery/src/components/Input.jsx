@@ -50,7 +50,7 @@ const Input = (props) => {
         </Alert>
       ) : null}
       <CardHeader
-        title="Welcome to Pragmabrewery!"
+        title="Welcome to ShaneBrewery!"
         subheader="Enter number of containers per beer"
       />
       <CardContent>

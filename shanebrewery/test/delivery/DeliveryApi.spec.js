@@ -1,4 +1,4 @@
-import Pragmabrewery from '../../src/api/Pragmabrewery';
+import ShaneBrewery from '../../src/api/ShaneBrewery';
 import Mock from '../../mocks/mock.config';
 
 describe('Delivery', function () {
@@ -27,7 +27,7 @@ describe('Delivery', function () {
       });
   };
 
-  const myDelivery = new Pragmabrewery().delivery;
+  const myDelivery = new ShaneBrewery().delivery;
 
   describe('constructor', function () {
     it('should store the Base URL', function () {
@@ -35,7 +35,7 @@ describe('Delivery', function () {
       expect(myDelivery.endpoint).toEqual('/breweryTrip');
     });
     it('should store the Base URL and cannot override endpoint', function () {
-      const otherDeliver = new Pragmabrewery(global.BASE_API_CONTAINER_URL)
+      const otherDeliver = new ShaneBrewery(global.BASE_API_CONTAINER_URL)
         .delivery;
       expect(otherDeliver.baseUrl).toEqual(global.BASE_API_CONTAINER_URL);
       expect(otherDeliver.endpoint).toEqual('/breweryTrip');

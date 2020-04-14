@@ -1,5 +1,5 @@
 import * as Constants from '../constants';
-import PragmaApi from '../api/Pragmabrewery';
+import ShaneBrewery from '../api/ShaneBrewery';
 import dotenv from 'dotenv';
 dotenv.config();
 
@@ -22,7 +22,7 @@ const removeContainerFailure = (payload) => ({
 
 export const removeFromDelivery = (id) => (dispatch) => {
   dispatch(removeContainerLoading());
-  const thisAPi = new PragmaApi(breweryApiUrl);
+  const thisAPi = new ShaneBrewery(breweryApiUrl);
   return thisAPi.container
     .delete(id)
     .then((_response) => dispatch(removeContainerSuccess()))
